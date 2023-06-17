@@ -4,8 +4,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "my-vm" {
-    ami = "ami-024e6efaf93d85776"
-    instance_type = "t2.micro"
+    ami = "var.ami"
+    instance_type = "var.instance_type"
     
 
 user_data = <<-EOF
