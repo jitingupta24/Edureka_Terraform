@@ -1,13 +1,12 @@
 provider "aws" {
-    region = "us-east-1"
+    region = "us-east-2"
       
 }
 
 resource "aws_instance" "my-vm" {
-    ami = "ami-053b0d53c279acc90"
+    ami = "ami-024e6efaf93d85776"
     instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-01e9e2afe946219ef"]
-    subnet_id = "subnet-01b0d89c1e613e35b"
+    
 
 user_data = <<-EOF
 #!/bash/bin
